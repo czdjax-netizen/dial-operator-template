@@ -1,0 +1,38 @@
+{
+  "name": "dial-operator-template",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Nová karta pro Chrome s rychlou volbou odkazů (náhrada Speed Dial 2). Základ pro vlastní vzhled.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json --fail-on-warnings",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "e2e": "npm run build && playwright test",
+    "zip": "npm run build && node tools/zip.mjs",
+    "new-key": "node tools/new-key.mjs",
+    "extension-id": "node tools/extension-id.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@sveltejs/vite-plugin-svelte": "^7.3.1",
+    "@tsconfig/svelte": "^5.0.8",
+    "@types/chrome": "^0.3.7",
+    "@types/node": "^24.19.2",
+    "happy-dom": "^21.0.4",
+    "svelte": "^5.57.3",
+    "svelte-check": "^4.7.8",
+    "typescript": "^6.0.3",
+    "vite": "^8.3.6",
+    "vitest": "^5.1.0"
+  },
+  "dependencies": {
+    "fractional-indexing": "^4.0.0"
+  }
+}

@@ -1,0 +1,75 @@
+/*
+ * Barvy a rozměry jako CSS proměnné. Tady se mění vzhled celé stránky.
+ * Motiv se přepíná atributem <html data-theme="light|dark"> (nastavení VZHLED),
+ * písmo atributem data-font. Nový motiv: přidat blok :root[data-theme='nazev']
+ * a jeho jméno do ThemeName v src/lib/model.ts a do nastavení.
+ */
+
+:root,
+:root[data-theme='light'] {
+  color-scheme: light;
+  --bg: #f3f4f6;
+  --surface: #ffffff;
+  --surface-2: #f7f8fa;
+  --border: #e2e5ea;
+  --border-strong: #c8cdd5;
+  --text: #1f2328;
+  --text-muted: #6b7280;
+  --text-strong: #0f1115;
+  --accent: #2563eb;
+  --accent-soft: rgb(37 99 235 / 0.12);
+  --on-accent: #ffffff;
+  --danger: #dc2626;
+  --warn: #b45309;
+  --ok: #15803d;
+  --shadow: 0 1px 2px rgb(15 23 42 / 0.06), 0 1px 6px rgb(15 23 42 / 0.05);
+  --shadow-hover: 0 6px 20px rgb(15 23 42 / 0.12);
+  --shadow-pop: 0 12px 40px rgb(15 23 42 / 0.18);
+  --overlay: rgb(15 23 42 / 0.35);
+  /* barva dlaždic bez loga: odstín podle domény, sytost a jas podle motivu */
+  --tile-sat: 62%;
+  --tile-light: 52%;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #16181d;
+  --surface: #1f2228;
+  --surface-2: #262a31;
+  --border: #30343c;
+  --border-strong: #464b55;
+  --text: #e6e8eb;
+  --text-muted: #9aa1ab;
+  --text-strong: #ffffff;
+  --accent: #60a5fa;
+  --accent-soft: rgb(96 165 250 / 0.16);
+  --on-accent: #0b1220;
+  --danger: #f87171;
+  --warn: #fbbf24;
+  --ok: #4ade80;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.3);
+  --shadow-hover: 0 6px 20px rgb(0 0 0 / 0.45);
+  --shadow-pop: 0 12px 40px rgb(0 0 0 / 0.55);
+  --overlay: rgb(0 0 0 / 0.5);
+  --tile-sat: 42%;
+  --tile-light: 40%;
+}
+
+:root {
+  --font: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  --font-scale: 1;
+  /* zaoblení dlaždic (nastavení MŘÍŽKA) a ovládacích prvků */
+  --radius-none: 0px;
+  --radius-small: 6px;
+  --radius-medium: 12px;
+  --radius-large: 18px;
+  --radius-ui: 8px;
+}
+
+:root[data-font='serif'] {
+  --font: Georgia, 'Times New Roman', serif;
+}
+
+:root[data-font='mono'] {
+  --font: ui-monospace, 'Cascadia Mono', Consolas, Menlo, monospace;
+}

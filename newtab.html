@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="cs" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <!-- bez refereru: některé weby (imgur) jinak obrázek pozadí z localhostu odmítnou a weby se nedozví, odkud přicházíš -->
+    <meta name="referrer" content="no-referrer" />
+    <title>Nová karta</title>
+    <style>
+      /* první vykreslení bez bílého záblesku ještě před načtením CSS */
+      html { background: #f3f4f6; }
+      @media (prefers-color-scheme: dark) { html { background: #16181d; } }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/newtab/main.ts"></script>
+  </body>
+</html>

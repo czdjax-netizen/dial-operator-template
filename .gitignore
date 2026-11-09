@@ -1,0 +1,12 @@
+node_modules/
+dist/
+*.zip
+# balíček rozšíření z npm run zip
+release/
+.DS_Store
+.vite/
+coverage/
+playwright-report/
+test-results/
+# lokální výstupy (snímky z testů, výsledky E2E)
+private/
